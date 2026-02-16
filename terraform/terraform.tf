@@ -3,7 +3,7 @@ terraform {
 
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.46.0"
+      version = "~> 5.25.0"
     }
 
     random = {
@@ -33,7 +33,7 @@ terraform {
     region = "eusc-de-east-1"
   }
 
-  required_version = "~> 1.3"
+  required_version = "~> 1.6.3"
 }
 ##
 ##
