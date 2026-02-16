@@ -3,7 +3,7 @@ module "eks" {
   version = "19.19.1"
 
   cluster_name    = local.cluster_name
-  cluster_version = "1.27"
+  cluster_version = "1.32"
 
   vpc_id                         = module.vpc.vpc_id
   subnet_ids                     = module.vpc.private_subnets
@@ -15,24 +15,22 @@ module "eks" {
   }
 
   eks_managed_node_groups = {
+
     one = {
-      name = "node-group-1"
-
-      instance_types = ["t3.small"]
-
-      min_size     = 1
-      max_size     = 3
-      desired_size = 2
+      name           = "node-group-1"
+      instance_types = ["t3.large"]
+      min_size       = 1
+      max_size       = 3
+      desired_size   = 2
     }
 
     two = {
-      name = "node-group-2"
-
-      instance_types = ["t3.small"]
-
-      min_size     = 1
-      max_size     = 2
-      desired_size = 1
+      name           = "node-group-2"
+      instance_types = ["t3.large"]
+      min_size       = 1
+      max_size       = 2
+      desired_size   = 1
     }
   }
+
 }
