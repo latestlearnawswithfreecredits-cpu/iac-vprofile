@@ -64,7 +64,6 @@ jobs:
       - name: Configure AWS CLI for Sovereign Cloud
         run: |
           aws configure set default.sts_regional_endpoints regional
-          aws configure set default.endpoint_url sts https://sts.eusc-de-east-1.amazonaws.eu
 
       - name: Get Kube config file
         id: getconfig
